@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="jeu_des_allumettes.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<h1></h1> 
+		<input type="number" placeholder="Combien de joueur pour cette partie?" id="nb_joueur" min="1"> <!--creation de l'input (case ou sont marqués les infos)-->
+		<button id="nb_joueur_button">Valider</button>  <!--création du boutton valider-->
+		<br> <!--la balise br sert a retourner a la ligne-->
+		<label for="allumettes" id="allumettes"></label> <!--label est comme la balise paragraphes-->
+		<br>
+		<input type="number" min="1" max="6" name="allumettes" placeholder="Nombre d'allumettes à enlever" id="nb_allumettes_a_enlever" style="display: none"> <!--creation de l'input (case ou sont marqués les infos)-->
+		<button	id="valider" style="display: none">Valider</button> <!--creation du bouton valider-->
+		<br>
+		<p id="nb_restant"></p>
+		<button id="reset" style="display: none"> Rejouer </button> <!--creation du bouton reset-->
+	</div>
+</body>
+</html>
