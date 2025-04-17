@@ -29,27 +29,27 @@ function gameplayTwoPlayers() {
     let winner = null;            // variable qui sotckera l'index du joueur gagnant
     
     // Boucle du jeu
-    while (!gameWon) {            // Tant que personne ne trouve, le jeu continue
+    while (!gameWon) {            // Boucle qui s'exécutera tant que le jeu n'est pas gagné, le jeu continue
     
         const currentPlayer = playerNames[currentPlayerIndex];    // JE récupère le nom du joueur actuel
         attempts[currentPlayerIndex]++;      // J'incrémente son nombre de tentatives
 
         let userNumber;
-        let validInput = false;
+        let validInput = false;   // VARIable qui sert a savoir si le nombre est bien entre 0 et 50
 
-        while(!validInput){
+        while(!validInput){       // boucle qui s'exécutera tant le nombre écris n'est pas entre 0 et 50 
             userNumber = parseInt(prompt(`${currentPlayer}, c'est votre tour (tentative ${attempts[currentPlayerIndex]})\nDevinez le nombre entre 1 et 50:`));   // Je demande au joueur d'écrire un nombre, parseint le convertit en nombre entier. ET J'affiche son nombre de tentatives
-            if(!isValidNumber(userNumber)){
+            if(!isValidNumber(userNumber)){       // Appel de la fonction isValidNumber si le nombre est entre 0 et 50
                 alert("Vueillez entrer un nombre valide entre 0 et 50");
             } else {
-                validInput = true;
+                validInput = true;   // LE NOMbre est bien entre 0 et 50, au joueur suivant, le jeu continu
             }
         }
        
         const result = didWin(userNumber, numberToFind);   // J'appelle la fonction didwin pour savoir si la réponse est correcte
 
         if (result === "correct") {
-            gameWon = true;
+            gameWon = true;                 // le jeu est gagné
             winner = currentPlayerIndex;   // je garde l'index gagnant du joueur
             break;
         } else {
