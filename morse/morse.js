@@ -81,7 +81,7 @@ const text = morseInput.value.toUpperCase()  // toUpperCase pour écrire en minu
             document.getElementById('resultinputmorse').value = traduction
         }
     }  
-    console.log(traduction) 
+    // console.log(traduction) 
     return traduction
 }   
 //console.log(encode("BONJOUR"))
@@ -112,7 +112,7 @@ const textMorse = latinInput.value
             translate += ' ';
         }
     }
-    console.log(translate)
+    // console.log(translate)
     return translate;
 }
 //console.log(decode("-... --- -. .--- --- ..- .-." + '/' + "-... .. .-.. .- .-.."));
