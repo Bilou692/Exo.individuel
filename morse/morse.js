@@ -71,7 +71,7 @@ function translateLatinCharacter(translate){    // Fonction qui traduit une lett
 
 function encode(){       // Fonction qui traduit un mot en morse
 const morseInput = document.getElementById('valueinputmorse')
-const text = morseInput.value
+const text = morseInput.value.toUpperCase()  // toUpperCase pour écrire en minuscule
     let traduction = ''
     const characters = getLatinCharacterList(text)
     for(let i = 0; i < characters.length; i++){
